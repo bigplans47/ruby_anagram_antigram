@@ -1,9 +1,11 @@
 class Anagram
   puts enter a sentence
-  user input = gets.chomp
+  user_input = "ruby bury"
   def anagram_antigram_calculator(user_input)
     word = user_input.split(" ")
-    return word[0]
+    if word[0].length === word[1].length
+    return word
+    end
 
   end
 end
