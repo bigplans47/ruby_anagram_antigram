@@ -26,28 +26,26 @@ class Anagram
     total_letters_1 = letters_of_word_at_1.length
 
     x=0
+    count_match = 0
     while (x<total_letters_0)
       first_letter_of_word = letters_of_word_at_0[x]
         # note first letter is an r
-      count_match = 0
       letters_of_word_at_1.each do |letter_of_word_at_1|
         if (letter_of_word_at_1 == first_letter_of_word)
           puts "good bitch"
-          count_match = count_match + 1
-          puts count_match
-          if count_match == total_letters_0-1
-            puts "full match occured"
-          end
+          count_match=count_match+1
+          # puts count_match
         else
-          count_match = count_match
           puts "no match"
-        puts count_match
         end
+        puts count_match
       end
-      puts x
+      # puts x
       x=x+1
     end
-
+    if count_match == total_letters_0
+      return "These words are anagrams"
+    end
   end
   anagram_calc(user_input)
 
