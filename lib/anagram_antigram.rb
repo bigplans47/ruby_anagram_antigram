@@ -1,17 +1,18 @@
 class Anagram
-  # puts enter a sentence
+  # variables
 
-  single_word_at_0
-  single_word_at_1
-  letters_of_word_at_0
-  letters_of_word_at_1
+  all_words = []
+  number_of_words = 0
+  single_word_at_0 =[]
+  single_word_at_1 =[]
+  letters_of_word_at_0 =[]
+  letters_of_word_at_1 =[]
 
 
-  user_input = "Level level"
+  # user_input = "Level level"
   def anagram_calc(user_input)
     user_input = user_input.downcase()
     all_words = user_input.split(" ")
-    total_number_of_words = all_words.length
     number_of_words = all_words.length
 
     # n = 0
@@ -45,12 +46,13 @@ class Anagram
       # puts x
       x=x+1
     end
+    puts "end of it all"
     if count_match == total_letters_1
       return "These words are anagrams"
     end
   end
 
-  user_input = "Level"
+  # the def below is to check if a word is a palindrome
   def palin_calc(user_input)
     user_input = user_input.downcase()
     the_reverse = user_input.reverse()
