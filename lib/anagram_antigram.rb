@@ -3,7 +3,7 @@ class Anagram
   user input = gets.chomp
   def anagram_antigram_calculator(user_input)
     word = user_input.split(" ")
-    puts word
+    return word[0]
 
   end
 end
