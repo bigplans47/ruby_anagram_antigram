@@ -7,7 +7,7 @@ class Anagram
   letters_of_word_at_1
   first_letter_of_word
 
-  user_input = "ruby bury"
+  user_input = "Ruby bury"
   def anagram_calc(user_input)
     all_words = user_input.split(" ")
     total_number_of_words = all_words.length
