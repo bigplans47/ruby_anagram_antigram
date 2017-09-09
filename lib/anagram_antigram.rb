@@ -63,23 +63,32 @@ class Anagram
     end
   end
 
-  while (x<user_input.length)
-    single_letter_of_word = letters_of_word_at_0[x]
-      # note first letter is an r
-    letters_of_word_at_1.each do |letter_of_word_at_1|
-      if (letter_of_word_at_1 == single_letter_of_word)
-        puts "good bitch"
-        count_match=count_match+1
-        break
-        # puts count_match
-      else
-        puts "no match"
+  # user_input = "rb ths"
+  def real_word(user_input)
+    user_input = user_input.downcase()
+    all_words = user_input.split(" ")
+    number_of_words = all_words.length
+    x=0
+    y=0
+    count_vowel = 0
+    while (x<number_of_words)
+      single_word = all_words[x]
+      letters_of_word = single_word.split("")
+      letters_of_word.each do |letter_of_word|
+        puts letter_of_word
+        if ((letter_of_word == "a") | (letter_of_word == "i")  | (letter_of_word == "e")| (letter_of_word == "o")| (letter_of_word == "u")| (letter_of_word == "y"))
+          count_vowel +=1
+          puts "vowel occured"
+        end
       end
-      puts count_match
+      x += 1
     end
-    # puts x
-    x=x+1
+    if (x == number_of_words) & (count_vowel == 0)
+          return "You need to input actual words! Check your vowels"
+        end
   end
+  real_word(user_input)
+
 
 
 end
