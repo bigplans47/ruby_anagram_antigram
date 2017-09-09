@@ -63,6 +63,23 @@ class Anagram
     end
   end
 
+  while (x<user_input.length)
+    single_letter_of_word = letters_of_word_at_0[x]
+      # note first letter is an r
+    letters_of_word_at_1.each do |letter_of_word_at_1|
+      if (letter_of_word_at_1 == single_letter_of_word)
+        puts "good bitch"
+        count_match=count_match+1
+        break
+        # puts count_match
+      else
+        puts "no match"
+      end
+      puts count_match
+    end
+    # puts x
+    x=x+1
+  end
 
 
 end
