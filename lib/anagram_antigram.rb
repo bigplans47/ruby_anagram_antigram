@@ -63,7 +63,7 @@ class Anagram
     end
   end
 
-  # user_input = "rb ths"
+  # user_input = "rib tahs"
   def real_word(user_input)
     user_input = user_input.downcase()
     all_words = user_input.split(" ")
@@ -83,9 +83,12 @@ class Anagram
       end
       x += 1
     end
-    if (x == number_of_words) & (count_vowel == 0)
-          return "You need to input actual words! Check your vowels"
-        end
+    if (x == number_of_words) & (count_vowel >= number_of_words)
+      # the true here means you have vowels every word
+      true
+    else
+      "You need to input actual words! Check your vowels in ALL words"
+    end
   end
   real_word(user_input)
 
