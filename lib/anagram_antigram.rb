@@ -55,7 +55,7 @@ class Anagram
     end
   end
 
-  # the def below is to check if a word is a palindrome
+  # the def below is to check if a word is a palindrome 
   def palin_calc(user_input)
     user_input = user_input.downcase()
     the_reverse = user_input.reverse()
