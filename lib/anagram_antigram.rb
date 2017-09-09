@@ -63,7 +63,7 @@ class Anagram
     end
   end
 
-  # user_input = "rib tahs"
+  # user_input = "rb tahs"
   def real_word(user_input)
     user_input = user_input.downcase()
     all_words = user_input.split(" ")
@@ -80,6 +80,9 @@ class Anagram
           count_vowel +=1
           puts "vowel occured"
         end
+      end
+      if count_vowel == 0
+        break
       end
       x += 1
     end
