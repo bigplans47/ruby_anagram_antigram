@@ -9,7 +9,7 @@ class Anagram
   letters_of_word_at_1 =[]
 
 
-  # user_input = "Level level"
+
   # user_input = "Ira air"
   def anagram_calc(user_input)
     user_input.downcase!()
@@ -54,8 +54,9 @@ class Anagram
       return "These words are antigrams"
     end
   end
+  # anagram_calc(user_input)
 
-  # the def below is to check if a word is a palindrome
+    # user_input = "Level level"
   def palin_calc(user_input)
     user_input = user_input.downcase()
     the_reverse = user_input.reverse()
@@ -65,8 +66,9 @@ class Anagram
       "nope"
     end
   end
+  palin_calc(user_input)
 
-  # user_input = "rb tahs"
+  # user_input = "rib ths boss" 
   def real_word(user_input)
     user_input = user_input.downcase()
     all_words = user_input.split(" ")
@@ -96,7 +98,7 @@ class Anagram
       "You need to input actual words! Check your vowels in ALL words"
     end
   end
-  real_word(user_input)
+  # real_word(user_input)
 
 
 
