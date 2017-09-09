@@ -10,6 +10,7 @@ class Anagram
 
 
   # user_input = "Level level"
+  # user_input = "ira ben"
   def anagram_calc(user_input)
     user_input = user_input.downcase()
     all_words = user_input.split(" ")
