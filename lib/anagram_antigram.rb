@@ -34,7 +34,7 @@ class Anagram
         # note first letter is an r
       letters_of_word_at_1.each do |letter_of_word_at_1|
         if (letter_of_word_at_1 == single_letter_of_word)
-          puts "good bitch"
+          puts "good"
           count_match=count_match+1
           break
           # puts count_match
@@ -49,6 +49,8 @@ class Anagram
     puts "end of it all"
     if count_match == total_letters_1
       return "These words are anagrams"
+    elsif count_match == 0
+      return "These words are antigrams"
     end
   end
 
