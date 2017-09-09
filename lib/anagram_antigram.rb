@@ -10,9 +10,9 @@ class Anagram
 
 
   # user_input = "Level level"
-  # user_input = "ira ben"
+  # user_input = "Ira air"
   def anagram_calc(user_input)
-    user_input = user_input.downcase()
+    user_input.downcase!()
     all_words = user_input.split(" ")
     number_of_words = all_words.length
 
@@ -55,7 +55,7 @@ class Anagram
     end
   end
 
-  # the def below is to check if a word is a palindrome 
+  # the def below is to check if a word is a palindrome
   def palin_calc(user_input)
     user_input = user_input.downcase()
     the_reverse = user_input.reverse()
