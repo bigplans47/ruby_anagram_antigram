@@ -6,12 +6,7 @@ class Anagram
   letters_of_word_at_0 =[]
   letters_of_word_at_1 =[]
   total_letter_array = []
- # user_input.downcase.gsub!(/[^a-z0-9\s]/i, '')
-  # user_input = "Ira air, ari"
-  # user_input = "post, Pots, spot, stop, tops"
-  # user_input = "Air home"
-  # user_input = "post, Potss, spot, stop, tops"
-  # variables
+  # instance variables
   def initialize(name, user_input)
     @name = name
     @user_input = user_input
@@ -24,7 +19,7 @@ class Anagram
   def user_input1
     @user_input
   end
-
+# function
   def anagram_calc(user_input)
     user_input = user_input.downcase.gsub(/[^a-z0-9\s]/i, '')
     all_words = user_input.split(" ")
@@ -33,7 +28,6 @@ class Anagram
     letters_of_word_at_0 = single_word_at_0.split("")
     total_letters_0 = letters_of_word_at_0.length
     total_letter_array = letters_of_word_at_0
-
     y=0
     count_of_words=0
     count_of_words_anti=0
@@ -46,13 +40,11 @@ class Anagram
       count_match = 0
       while (x<total_letters_0)
         single_letter_of_word = letters_of_word_at_0[x]
-         # note first letter is an r
         letters_of_word_at_1.each do |letter_of_word_at_1|
           if (letter_of_word_at_1 == single_letter_of_word) & (total_letters_0 == total_letters_1)
             puts "Letter matched"
             count_match=count_match+1
             break
-           # puts count_match
           else
             puts "No match"
           end
@@ -72,7 +64,6 @@ class Anagram
     puts total_letter_array.uniq.length
     if count_of_words+1 == all_words.length
       return "All your words are Anagrams"
-     # count_of_words +=1
    elsif (count_of_words == 0) & (total_letter_array.uniq.length == total_letter_array.length)
       return "Your words have no letter matches and are Anti-grams"
     else
@@ -85,10 +76,9 @@ class Anagram
    # end
   end
   # anagram_calc(user_input)
-
     # user_input = "Level level"
   def palin_calc(user_input)
-    user_input = user_input.downcase()
+    user_input = user_input.downcase.gsub(/[^a-z0-9\s]/i, '')
     the_reverse = user_input.reverse()
     if user_input == the_reverse
       return "Your words are Palindromes"
@@ -97,10 +87,8 @@ class Anagram
     end
   end
   # palin_calc(user_input)
-
-  # user_input = "rib ths boss"
   def real_word(user_input)
-    user_input = user_input.downcase()
+    user_input = user_input.downcase.gsub(/[^a-z0-9\s]/i, '')
     all_words = user_input.split(" ")
     number_of_words = all_words.length
     x=0
@@ -129,7 +117,4 @@ class Anagram
     end
   end
   # real_word(user_input)
-
-
-
 end
