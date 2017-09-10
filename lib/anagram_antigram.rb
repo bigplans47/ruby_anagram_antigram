@@ -12,7 +12,7 @@ class Anagram
  # user_input.downcase.gsub!(/[^a-z0-9\s]/i, '')
   # user_input = "Ira air, ari"
   # user_input = "post, Pots, spot, stop, tops"
-  # user_input = "Air home"
+  # user_input = "Air home" 
   def anagram_calc(user_input)
     user_input = user_input.downcase.gsub(/[^a-z0-9\s]/i, '')
     all_words = user_input.split(" ")
