@@ -49,13 +49,14 @@ class Anagram
          # note first letter is an r
         letters_of_word_at_1.each do |letter_of_word_at_1|
           if (letter_of_word_at_1 == single_letter_of_word) & (total_letters_0 == total_letters_1)
-            puts "good"
+            puts "Letter matched"
             count_match=count_match+1
             break
            # puts count_match
           else
-            puts "no match"
+            puts "No match"
           end
+          puts "Current number of letter matches"
           puts count_match
         end
         x=x+1
@@ -65,7 +66,7 @@ class Anagram
       count_of_words +=1
       end
     end
-    puts "end of it all"
+    puts "All Words have been checked"
     puts total_letter_array
     puts total_letter_array.length
     puts total_letter_array.uniq.length
