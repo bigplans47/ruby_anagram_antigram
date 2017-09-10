@@ -1,19 +1,30 @@
 class Anagram
-  # variables
-
   all_words = []
   number_of_words = 0
   single_word_at_0 =[]
   single_word_at_1 =[]
   letters_of_word_at_0 =[]
   letters_of_word_at_1 =[]
-  user_input = ""
-
+  total_letter_array = []
  # user_input.downcase.gsub!(/[^a-z0-9\s]/i, '')
   # user_input = "Ira air, ari"
   # user_input = "post, Pots, spot, stop, tops"
   # user_input = "Air home"
   # user_input = "post, Potss, spot, stop, tops"
+  # variables
+  def initialize(name, user_input)
+    @name = name
+    @user_input = user_input
+  end
+# name
+  def name1
+    @name
+  end
+# user_input
+  def user_input1
+    @user_input
+  end
+
   def anagram_calc(user_input)
     user_input = user_input.downcase.gsub(/[^a-z0-9\s]/i, '')
     all_words = user_input.split(" ")
@@ -29,7 +40,7 @@ class Anagram
     while (y<all_words.length-1)
       single_word_at_1 = all_words[y+1]
       letters_of_word_at_1 = single_word_at_1.split("")
-      total_letter_array.push(letters_of_word_at_1)
+      total_letter_array = total_letter_array.concat(letters_of_word_at_1)
       total_letters_1 = letters_of_word_at_1.length
       x=0
       count_match = 0
@@ -56,8 +67,8 @@ class Anagram
     end
     puts "end of it all"
     puts total_letter_array
-    puts total_letter_array.uniq.length
     puts total_letter_array.length
+    puts total_letter_array.uniq.length
     if count_of_words+1 == all_words.length
       return "All your words are Anagrams"
      # count_of_words +=1
