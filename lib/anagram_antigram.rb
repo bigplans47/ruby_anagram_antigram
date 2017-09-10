@@ -55,13 +55,16 @@ class Anagram
       end
     end
     puts "end of it all"
+    puts total_letter_array
+    puts total_letter_array.uniq.length
+    puts total_letter_array.length
     if count_of_words+1 == all_words.length
-      return "All the words are anagrams"
+      return "All your words are Anagrams"
      # count_of_words +=1
    elsif (count_of_words == 0) & (total_letter_array.uniq.length == total_letter_array.length)
-      return "These words have no letter matches and are antigrams"
+      return "Your words have no letter matches and are Anti-grams"
     else
-      return "Not anagram or antigram"
+      return "Your words are not Anagrams or Anti-grams"
     end
    # # elsif count_of_words_anti == number_of_words
    # #   antigram
@@ -76,9 +79,9 @@ class Anagram
     user_input = user_input.downcase()
     the_reverse = user_input.reverse()
     if user_input == the_reverse
-      return "palindrom occured"
+      return "Your words are Palindromes"
     else
-      "nope"
+      "Your words are not Palindromes"
     end
   end
   # palin_calc(user_input)
