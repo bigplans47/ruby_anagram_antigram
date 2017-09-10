@@ -12,6 +12,7 @@ class Anagram
  # user_input.downcase.gsub!(/[^a-z0-9\s]/i, '')
   # user_input = "Ira air, ari"
   # user_input = "post, Pots, spot, stop, tops"
+  # user_input = "Air home"
   def anagram_calc(user_input)
     user_input = user_input.downcase.gsub(/[^a-z0-9\s]/i, '')
     all_words = user_input.split(" ")
@@ -19,6 +20,7 @@ class Anagram
     single_word_at_0 = all_words[0]
     letters_of_word_at_0 = single_word_at_0.split("")
     total_letters_0 = letters_of_word_at_0.length
+    total_letter_array = letters_of_word_at_0
 
     y=0
     count_of_words=0
@@ -26,6 +28,7 @@ class Anagram
     while (y<all_words.length-1)
       single_word_at_1 = all_words[y+1]
       letters_of_word_at_1 = single_word_at_1.split("")
+      total_letter_array.push(letters_of_word_at_1)
       total_letters_1 = letters_of_word_at_1.length
       x=0
       count_match = 0
@@ -46,7 +49,7 @@ class Anagram
         x=x+1
       end
       y+=1
-      if count_match = total_letters_0
+      if count_match == total_letters_0
       count_of_words +=1
       end
     end
@@ -54,9 +57,8 @@ class Anagram
     if count_of_words+1 == all_words.length
       return "all the words are anagrams"
      # count_of_words +=1
-    elsif count_match == 0
-      puts "possible antigrams"
-      count_of_words_anti +=1
+   elsif (count_of_words == 0) & (total_letter_array.uniq.length == total_letter_array.length)
+      return "antigrams occur"
     end
    # # elsif count_of_words_anti == number_of_words
    # #   antigram
