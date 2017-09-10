@@ -12,7 +12,8 @@ class Anagram
  # user_input.downcase.gsub!(/[^a-z0-9\s]/i, '')
   # user_input = "Ira air, ari"
   # user_input = "post, Pots, spot, stop, tops"
-  # user_input = "Air home" 
+  # user_input = "Air home"
+  # user_input = "post, Potss, spot, stop, tops"
   def anagram_calc(user_input)
     user_input = user_input.downcase.gsub(/[^a-z0-9\s]/i, '')
     all_words = user_input.split(" ")
@@ -36,7 +37,7 @@ class Anagram
         single_letter_of_word = letters_of_word_at_0[x]
          # note first letter is an r
         letters_of_word_at_1.each do |letter_of_word_at_1|
-          if (letter_of_word_at_1 == single_letter_of_word)
+          if (letter_of_word_at_1 == single_letter_of_word) & (total_letters_0 == total_letters_1)
             puts "good"
             count_match=count_match+1
             break
@@ -59,6 +60,8 @@ class Anagram
      # count_of_words +=1
    elsif (count_of_words == 0) & (total_letter_array.uniq.length == total_letter_array.length)
       return "antigrams occur"
+    else
+      return "Not anagram or antigram"
     end
    # # elsif count_of_words_anti == number_of_words
    # #   antigram
