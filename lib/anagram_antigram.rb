@@ -56,10 +56,10 @@ class Anagram
     end
     puts "end of it all"
     if count_of_words+1 == all_words.length
-      return "all the words are anagrams"
+      return "All the words are anagrams"
      # count_of_words +=1
    elsif (count_of_words == 0) & (total_letter_array.uniq.length == total_letter_array.length)
-      return "antigrams occur"
+      return "These words have no letter matches and are antigrams"
     else
       return "Not anagram or antigram"
     end
@@ -69,7 +69,7 @@ class Anagram
    # #   puts all are anagram_calc
    # end
   end
-  anagram_calc(user_input)
+  # anagram_calc(user_input)
 
     # user_input = "Level level"
   def palin_calc(user_input)
@@ -81,7 +81,7 @@ class Anagram
       "nope"
     end
   end
-  palin_calc(user_input)
+  # palin_calc(user_input)
 
   # user_input = "rib ths boss"
   def real_word(user_input)
